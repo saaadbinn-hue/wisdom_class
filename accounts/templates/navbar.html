@@ -1,126 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nav-bar</title>
     <style>
-        *{
-            box-sizing: border-box;
-            padding: 0px;
-            margin: 0px;
-        }
-        .child{
-            margin-bottom: 0.7rem;
-            margin-top: 0.7rem;
-        }
-        .navbar{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background-color: rgb(13 110 253);
-            width: 100vw;
-        }
-        .nav-list{
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            justify-content: space-between;
-            /* background-color: aqua; */
-        }
-        .nav-list li{
-            padding-left: 5rem;
-            font-size: 20px;
-            margin-top: 1rem;
-        }
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
 
-        .nav-list li a{
-            text-decoration: none;
-            color: white;
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-        }
+        background-color: rgb(13, 110, 253);
+        width: 100%;
+        padding: 0 2rem;
+      }
 
-        #admission{
-            font-size: 25px;
-            margin-right: 2rem;
-            border-radius: 20px;
-            background-color: #ffc107;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            color: white;
+      .child {
+        margin: 0.7rem 0;
+      }
+
+      #child1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .sp {
+        font-size: 2.5rem;
+      }
+
+      #name {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-list li {
+        font-size: 20px;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      #admission {
+        background-color: #ffc107;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        color: white;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 700px) {
+        .navbar {
+          width: 100%;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         #child1 {
-            display: flex;
-            flex-direction: row;
+          justify-content: center;
         }
 
-        .sp {
-            font-size: 40px;
-        }
-        #name{
-            color: white;
+        #logo {
+          font-size: 2.5rem;
         }
 
-        @media (max-width:700px){
-
-            .navbar{
-                padding: 1rem;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            #logo{
-                font-size: 3rem;
-            }
-            #child2{
-                display: flex;
-                flex-direction: row;
-                gap: 0.5rem;
-                padding: 0px;
-                margin: 0px;
-                font-size: 1rem;
-            }
+        #name {
+          font-size: 1.8rem;
         }
+
+        #child2 {
+          width: 100%;
+        }
+
+        .nav-list {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          align-items: center;
+        }
+
+        .nav-list li {
+          padding: 0;
+          margin: 0;
+          font-size: 1.1rem;
+        }
+
+        #admission {
+          padding: 0.4rem 1rem;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="child" id="child1">
-            <div>
-                <span id="logo" class="sp">🎓</span>
-            </div>
-
-            <div>
-                <span id="name" class="sp">Wisdom Education</span>
-            </div>
-
+      <div class="child" id="child1">
+        <div>
+          <span id="logo" class="sp">🎓</span>
         </div>
-        <div class="child" id="child2">
-            <ul class="nav-list">
-                <li>
-                    <a href="{% url 'home' %}" class="nav-element">Home</a>
-                </li>
-                <li>
-                    <a href="#course_title" class="nav-element">About</a>
-                </li>
-                <li>
-                    <a href="{% url 'contact' %}" class="nav-element">Contact</a>
-                </li>
-                <li>
-                    <a href="#footer" id="admission">Admission</a>
-                </li>
-            </ul>
 
+        <div>
+          <span id="name" class="sp">Wisdom Education</span>
         </div>
+      </div>
+      <div class="child" id="child2">
+        <ul class="nav-list">
+          <li>
+            <a href="{% url 'home' %}" class="nav-element">Home</a>
+          </li>
+          <li>
+            <a href="#course_title" class="nav-element">About</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}" class="nav-element">Contact</a>
+          </li>
+          <li>
+            <a href="#footer" id="admission">Admission</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
-</body>
-
+  </body>
 </html>
