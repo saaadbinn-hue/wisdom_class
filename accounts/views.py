@@ -38,3 +38,11 @@ def about(request):
 
 def about(request):
     return HttpResponse('This is about page')
+
+
+def admin_dashboard(request):
+    enquiries = Enquiry.objects.all()
+
+    return render(request, "admin-dashboard.html", {
+        "enquiries": enquiries
+    })
