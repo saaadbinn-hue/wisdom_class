@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #footer {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(33,37,41,1);
+            color: white;
+
+        }
+
+        .foot_list {
+            list-style: none;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: rgb(160, 155, 155);
+            font-size: 18px;
+        }
+        .footer-child{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* background-color: aqua; */
+            padding-left: 4rem;
+            padding: 2rem;
+        }
+        #quote{
+            display: inline-block;
+            width: 60%;
+            margin-left: 2rem;
+            color: rgb(160, 155, 155);;
+        }
+        .footer-child2{
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        #content1 h2{
+            color:  #ffc107;
+            font-size: 2rem;
+            padding-left: 1.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #quick-link h2{
+            margin-bottom: 1.5rem;
+        }
+        #contact-details h2{
+            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width:700px){
+            footer h2{
+                font-size: 15px;
+            }
+            #content1 h2{
+                font-size: 15px;
+            }
+            footer span{
+                font-size: 0.8rem;
+            }
+            footer a{
+                font-size: 0.8rem;
+            }
+            .footer-content{
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer id="footer">
+            <div class="footer-child" id="fooer-child1">
+                <div class="footer-content" id="content1">
+                    <div>
+                        <h2>📖Wisdom Coaching Center</h2>
+                    </div>
+                    <div>
+                        <span id="quote">"Knowledge Today, Success Tomorrow"
+                            Providing complete preparation, best guidance, and sure success for a bright future.</span>
+                    </div>
+                </div>
+                <div class="footer-content" id="footer-child2">
+                    <div id="quick-link">
+                        <h2>Quick links</h2>
+                    </div>
+                    <div>
+                        <ul class="foot_list">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Courses</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="footer-content" id="footer-child3">
+                    <div id="contact-details">
+                        <h2>Contact Details</h2>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="tel:+91 7857063397">📞 +91 7857063397</a>
+                            </li>
+                            <li>
+                                <a href="">📍 Rani Bagh, Hafiz Wazarat Market, 1st Floor</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@wisdomcoaching.in">✉️ info@wisdomcoaching.in</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+        <div class="footer-child2" id="footer-child1">
+            <p id="copyright">© 2026 Wisdom Coaching Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

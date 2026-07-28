@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            background-image: linear-gradient(110deg, rgba(75, 108, 183, 1) 11.3%, rgba(24, 40, 72, 1) 99.3%);
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .title {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .title_content {
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+
+        .title_content h2,
+        h4 {
+            margin-bottom: 1rem;
+        }
+
+        .title_content h2 {
+            font-size: 3rem;
+            color: rgba(13, 110, 253, 1);
+        }
+
+        .title_content h4 {
+            font-size: 1.5rem;
+        }
+
+        .title_content p {
+            font-size: 1rem;
+        }
+
+        #Admission {
+            text-align: center;
+            padding-top: 7rem;
+        }
+
+        #Admission span {
+            border-radius: 50%;
+            padding: 2rem;
+            background-color: rgba(13, 110, 253, 1);
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+
+
+        @media(max-width:700px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .title_content {
+                text-align: center;
+                padding-left: 0.5rem;
+                padding-right: 5rem;
+            }
+
+            .title_content h4 {
+                font-size: 1.8rem;
+            }
+
+            .title_content h2 {
+                font-size: 2rem;
+                color: rgba(13, 110, 253, 1);
+            }
+
+            .title_content p {
+                margin-bottom: 0px;
+                font-size: 1.3rem;
+                padding-bottom: 0px;
+            }
+
+            #Admission {
+                margin-top: 0px;
+                text-align: center;
+                margin-left: 2rem;
+                margin-bottom: 1rem;
+                border-radius: 50%;
+                padding: 2rem;
+                background-color: rgba(13, 110, 253, 1);
+                color: white;
+                font-weight: 900;
+                font-size: 30px;
+            }
+            #Admission span{
+                font-size: 1.2rem;
+            }
+            
+        }
+
+        #course_title {
+            text-align: center;
+            background-color: beige;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .course_detail {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .course_detail_child {
+            border-top: 4px solid rgba(140, 65, 65, 0.45);
+            text-align: center;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .course_detail_child h2 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            padding-left: 0px;
+            margin-top: 2rem;
+        }
+
+        .course_detail_child p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .choose_us {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: white;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 5px;
+        }
+        .choose_child{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .choose_title{
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        .choose_title h2{
+            font-size: 2rem;
+            color: rgba(13,110,253,1);
+        }
+
+        .choose_us_child{
+            background-color: rgb(224, 217, 217);
+            border-radius: 10px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+        }
+        .choose_us_child h2{
+            font-size: 4rem;
+        }
+        .choose_us_child h3, span{
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+         @media(max-width:700px){
+            .choose_us{
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+            }
+            .choose_child{
+                display: flex;
+                flex-direction: column;
+            }
+            .choose_title{
+                color: rgba(13,110,253,1);
+            }
+
+         }
+
+         .Faculty{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background-color: azure;
+            font-size: 2rem;
+         }
+         .faculty_info{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            text-align: center;
+            padding-left: 4rem;
+
+         }
+         .faculty_info_child{
+            background-color: white;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-top: 4px solid rgba(230, 140, 140, 0.495);
+            border-radius: 5px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+         }
+         #fac_name{
+            font-size: 1.5rem;
+            font-weight: 700;
+         }
+
+         @media(max-width:700px){
+
+            .faculty_info{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem;
+            }
+
+         }
+        
+         .enroll{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgba(13,110,253,1);
+            margin-top: 2rem;
+            padding: 2rem;
+            border-radius: 5px;
+         }
+         .enroll h2{
+            font-size: 2.2rem;
+            color: rgba(255,193,7,1);
+            margin-bottom: 1rem;
+         }
+         .enroll p{
+            font-size: 1.5rem;
+            color: white;
+         }
+         .enroll_contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+         }
+
+         .enroll_contact a{
+            text-decoration: none;
+            background-color: #ffc720;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: black;
+         }
+         .enroll_detail{
+            width: 50%;
+         }
+
+         @media (max-width:700px){
+            .enroll{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+            .enroll_detail{
+                width: 90%;
+            }
+            .enroll_contact a{
+                padding-left: 0.5rem;
+                padding-right: 0.8rem;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+
+         }
+
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html'%}
+    <div class="container">
+        <div class="title">
+            <div class="title_content">
+                <h2>Welcome to Wisdom Coaching Center</h2>
+                <h4>"Knowledge Today, Success Tomorrow"</h4>
+                <p>We are dedicated to building strong foundations and clearing concepts for students from Class V to X,
+                    alongside offering specialized coaching for AMU and JMI entrance exams. With both Hindi and English
+                    mediums available, we ensure that every student receives the personal attention and discipline
+                    needed for a bright future.
+                </p>
+            </div>
+            <div id="Admission">
+                <span>Admission Open</span>
+            </div>
+        </div>
+
+        <h2 id="course_title">Our Courses</h2>
+        <div class="course_detail">
+            <div class="course_detail_child">
+                <h2>💼Class V<sup>th</sup> to 10<sup>th</sup></h2>
+                <p>Hindi & English Medium. Regular tests, doubt classes, and quality notes.</p>
+            </div>
+            <div class="course_detail_child">
+                <h2>🗣️English Spoken</h2>
+                <p>Speak English, Think English, Be Confident. Improve your communication skills.</p>
+
+            </div>
+            <div class="course_detail_child">
+                <h2>🏫AMU Entrance</h2>
+                <p>Complete preparation and best guidance for Aligarh Muslim University entrances.</p>
+
+            </div>
+            <div class="course_detail_child">
+                <h2>🏫JMI Entrance</h2>
+                <p>Result-oriented learning strategies for Jamia Millia Islamia entrance exams.</p>
+            </div>
+        </div>
+
+        <div class="choose_us">
+            <div class="choose_title">
+                <h2>Why choose us?</h2>
+            </div>
+            <div class="choose_child">
+                <div class="choose_us_child">
+                    <h2>📖</h2>
+                    <h3>Expert Facilities</h3>
+                    <span>Experienced & Qualified</span>
+                </div>
+                <div class="choose_us_child">
+                    <h2>💡</h2>
+                    <h3>Concept Based Learning</h3>
+                    <span>Strong Foundation</span>
+                </div>
+                <div class="choose_us_child">
+                    <h2>📝</h2>
+                    <h3>Performance Tracking</h3>
+                    <span>Regular Tests</span>
+                </div>
+                <div class="choose_us_child">
+                    <h2>⚠️</h2>
+                    <h3>Personal Attention</h3>
+                    <span>Every Student Matters</span>
+                </div>
+                <div class="choose_us_child">
+                    <h2>📈</h2>
+                    <h3>Discipline and Moivation</h3>
+                    <span>Bright Future</span>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="Faculty">Our Faculties</h2>
+        <div class="faculty_info">
+            <div class="faculty_info_child">
+                <div>
+                    <img src="https://img.icons8.com/?size=100&id=21350&format=png&color=000000" alt="">
+                </div>
+                <div class="faculty_bio">
+                    <span id="fac_name">Md Abu Maaz</span>
+                    <br>
+                    <span>M.A + B.Ed (AMU)</span>
+                    <br>
+                    <span>CTET | STET Qualified</span>
+                </div>
+            </div>
+            <div class="faculty_info_child">
+                <div>
+                    <img src="https://img.icons8.com/?size=100&id=21350&format=png&color=000000" alt="">
+                </div>
+                <div class="faculty_bio">
+                    <span id="fac_name">Yusuf Ghaffar</span>
+                    <br>
+                    <span>MA + B.Ed (JMI)</span>
+                    <br>
+                    <span>CTET | STET Qualified</span>
+                </div>
+            </div>
+            <div class="faculty_info_child">
+                <div>
+                    <img src="https://img.icons8.com/?size=100&id=21350&format=png&color=000000" alt="">
+                </div>
+                <div class="faculty_bio">
+                    <span id="fac_name">Mahir</span>
+                    <br>
+                    <span>B.TECH + B.Ed (JMI)</span>
+                </div>
+            </div>
+            <div class="faculty_info_child">
+                <div>
+                    <img src="https://img.icons8.com/?size=100&id=21350&format=png&color=000000" alt="">
+                </div>
+                <div class="faculty_bio">
+                    <span id="fac_name">MD Aslam</span>
+                    <br>
+                    <span>MA + B.Ed</span>
+                    <br>
+                    <span>CTET | STET Qualified</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="enroll" id="enroll_name">
+            <div class="enroll_detail">
+                <h2>Enroll Now! Admissions Open</h2>
+                <p>📍Address: Rani Bagh, Hafiz Wazarat Market, 1st Floor</p>
+                <p>📞Call / WhatsApp: 7857063397, 9065490886</p>
+            </div>
+            <div class="enroll_contact">
+                <a href="tel:+917857063397">📞Call Us</a>
+            </div>
+        </div>
+
+    </div>
+    {% include 'footer.html'%}
+</body>
+
+</html>

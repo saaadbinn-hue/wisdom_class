@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-bar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        .child{
+            margin-bottom: 0.7rem;
+            margin-top: 0.7rem;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(13 110 253);
+            width: 100vw;
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-between;
+            /* background-color: aqua; */
+        }
+        .nav-list li{
+            padding-left: 5rem;
+            font-size: 20px;
+            margin-top: 1rem;
+        }
+
+        .nav-list li a{
+            text-decoration: none;
+            color: white;
+
+        }
+
+        #admission{
+            font-size: 25px;
+            margin-right: 2rem;
+            border-radius: 20px;
+            background-color: #ffc107;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: white;
+        }
+
+        #child1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sp {
+            font-size: 40px;
+        }
+        #name{
+            color: white;
+        }
+
+        @media (max-width:700px){
+
+            .navbar{
+                padding: 1rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #logo{
+                font-size: 3rem;
+            }
+            #child2{
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                padding: 0px;
+                margin: 0px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="child" id="child1">
+            <div>
+                <span id="logo" class="sp">🎓</span>
+            </div>
+
+            <div>
+                <span id="name" class="sp">Wisdom Education</span>
+            </div>
+
+        </div>
+        <div class="child" id="child2">
+            <ul class="nav-list">
+                <li>
+                    <a href="{% url 'home' %}" class="nav-element">Home</a>
+                </li>
+                <li>
+                    <a href="#course_title" class="nav-element">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}" class="nav-element">Contact</a>
+                </li>
+                <li>
+                    <a href="#footer" id="admission">Admission</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+</body>
+
+</html>
