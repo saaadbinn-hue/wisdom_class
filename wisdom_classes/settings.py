@@ -20,6 +20,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://wisdom-classes.up.railway.app"
 ]
 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 
 # Application definition
 
